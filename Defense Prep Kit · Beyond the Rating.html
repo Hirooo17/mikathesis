@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Defense Prep Kit · Beyond the Rating</title>
+<style>
+:root{--bg:#fbf7f4;--card:#fff;--ink:#2a2230;--mute:#6f6578;--acc:#b4235a;--acc2:#fde7ef;--line:#eadfe4;--ok:#1f7a4d;--wn:#a85a00;--no:#c0262d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17121b;--card:#211a27;--ink:#f1e9f4;--mute:#b3a6bb;--acc:#ff7fae;--acc2:#3a2030;--line:#372d40;--ok:#6fd6a0;--wn:#ffb866;--no:#ff8a8f}}
+:root[data-theme="dark"]{--bg:#17121b;--card:#211a27;--ink:#f1e9f4;--mute:#b3a6bb;--acc:#ff7fae;--acc2:#3a2030;--line:#372d40;--ok:#6fd6a0;--wn:#ffb866;--no:#ff8a8f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Georgia,serif}
+.w{max-width:780px;margin:0 auto;padding:16px 14px 70px}
+header{text-align:center;padding:26px 6px 10px}
+.tag{background:var(--acc2);color:var(--acc);padding:4px 14px;border-radius:99px;font:600 12px system-ui,sans-serif;letter-spacing:.05em}
+h1{font-size:clamp(26px,6vw,36px);margin:12px 0 4px;line-height:1.2}
+h2{font-size:22px;margin:6px 0}
+.m{color:var(--mute);font:14px system-ui,sans-serif;margin:2px 0 12px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line)}
+nav button{flex:none}
+button{touch-action:manipulation;-webkit-tap-highlight-color:transparent;font:600 14px system-ui,sans-serif;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:99px;padding:8px 15px;cursor:pointer}
+button.on,button.p{background:var(--acc);color:#fff;border-color:var(--acc)}
+.c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:10px 0}
+.c h3{margin:0 0 4px;font:700 14px system-ui,sans-serif;color:var(--acc)}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px}
+.st{text-align:center;padding:10px;border-radius:12px;background:var(--card);border:1px solid var(--line)}
+.st b{display:block;font:700 26px system-ui,sans-serif}
+.bar{height:9px;background:var(--line);border-radius:9px;overflow:hidden;margin:6px 0}.bar i{display:block;height:100%;background:var(--acc);transition:width .3s}
+.q{border-left:5px solid var(--line)}.q.r1{border-color:var(--ok)}.q.r2{border-color:var(--wn)}.q.r3{border-color:var(--no)}
+.q summary{cursor:pointer;font-weight:700}.q .tg{font:600 11px system-ui,sans-serif;color:var(--acc);text-transform:uppercase;letter-spacing:.06em;display:block}
+.rt{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.rt button[data-v="1"].on{background:var(--ok);border-color:var(--ok)}.rt button[data-v="2"].on{background:var(--wn);border-color:var(--wn)}.rt button[data-v="3"].on{background:var(--no);border-color:var(--no)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.big{font:700 40px system-ui,sans-serif;text-align:center;color:var(--acc)}
+.ctr{text-align:center}
+textarea,input[type=date]{width:100%;min-height:44px;font:16px Georgia,serif;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:9px;margin:4px 0}
+label.ck{display:flex;gap:10px;padding:9px 2px;border-bottom:1px solid var(--line);cursor:pointer}
+label.ck input{accent-color:var(--acc);width:18px;height:18px;margin-top:5px;flex:none}
+label.ck input:checked+span{text-decoration:line-through;color:var(--mute)}
+.gl{cursor:pointer}.gl p{margin:4px 0 0;color:var(--mute)}
+#br{width:150px;height:150px;border-radius:50%;margin:16px auto;background:var(--acc2);border:3px solid var(--acc);display:grid;place-items:center;font:700 16px system-ui,sans-serif;color:var(--acc);transition:transform 4s linear}
+section{display:none}section.on{display:block}
+@media (max-width:640px){.w{padding:8px 12px 110px}header{padding:16px 4px 6px}nav{position:fixed;top:auto;bottom:0;left:0;right:0;z-index:20;justify-content:space-around;gap:2px;overflow:visible;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);border-bottom:0;box-shadow:0 -4px 14px rgba(0,0,0,.1)}nav button{flex:1;display:flex;flex-direction:column;align-items:center;border:0;background:transparent;border-radius:12px;padding:6px 2px;font-size:11px;min-height:50px}nav button span{font-size:19px;line-height:1.2}nav button.on{background:var(--acc2);color:var(--acc)}button{min-height:44px}.rt button{flex:1 1 30%}.chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.chips button{flex:none}.big{font-size:34px}.q summary{padding:4px 0}.c{padding:13px 13px}}
+@media print{nav,button{display:none}section{display:block!important}}
+</style>
+</head>
+<body>
+<div class="w">
+<header><span class="tag">THESIS DEFENSE PREP KIT</span><h1>Beyond the Rating</h1><p class="m">MTRCB advisories · 4th-year Broadcasting students, PUP<br><i>Made with love, so you walk in ready. You’ve got this. ♥</i></p></header>
+<nav id="nv"></nav>
+
+<section id="t-home" class="on">
+<div class="c ctr"><h3>Countdown to defense</h3><div class="big" id="cd">–</div><input type="date" id="dd" aria-label="Defense date"></div>
+<div class="c"><h3>Readiness</h3><div class="bar"><i id="pb"></i></div><div class="g" id="sg"></div></div>
+<div class="c"><h3>Weakest areas (practice these first)</h3><div id="wk"></div></div>
+<div class="c ctr"><button class="p" data-go="mock">Start a mock defense →</button></div>
+<div class="c"><h3>The honest take</h3><p>A solid B that can reach an A. Strengths: timely topic, justified respondents, and ego-involvement treated as something to measure. Weak spots: SJT fit for a rating label, an undefined “effectiveness,” contradictions between intro and SOP, presupposed findings, repetition, and citation inconsistencies. This kit targets exactly those.</p></div>
+</section>
+
+<section id="t-study"><h2>Study the questions</h2><p class="m">Open a card, answer out loud first, then rate yourself honestly.</p><div class="chips" id="fc"></div><div id="ql"></div></section>
+
+<section id="t-mock"><h2>Mock defense</h2><p class="m">Pick a panelist. You get 90 seconds per question, just like the real thing.</p><div class="chips" id="pc"></div>
+<div class="c ctr"><h3 id="mp">Panelist</h3><div class="big" id="mt">90</div><p id="mq" style="font-weight:700;font-size:18px">Choose a panelist, then press Next.</p><div id="ma" class="m" style="display:none;text-align:left"></div>
+<div class="rt" style="justify-content:center"><button class="p" id="nx">Next question</button><button id="rv">Reveal answer</button></div><div class="rt" style="justify-content:center" id="mr"></div></div></section>
+
+<section id="t-kit"><h2>Toolkit</h2>
+<div class="c"><h3>60-second pitch builder</h3><p class="m">Fill the blanks; your opening writes itself.</p><div id="pf"></div><div class="c" style="background:var(--acc2)" id="pv"></div><button id="cp">Copy pitch</button></div>
+<div class="c"><h3>SJT cheat sheet (tap a term)</h3><div id="gl"></div></div>
+<div class="c"><h3>Bridge phrases (tap to copy)</h3><div id="bp"></div></div>
+<div class="c ctr"><h3>Calm down: box breathing</h3><div id="br">Ready</div><button class="p" id="bb">Start</button></div></section>
+
+<section id="t-list"><h2>Checklists</h2><div class="bar"><i id="lb"></i></div><div class="c"><h3>Fix the paper</h3><div id="fx"></div></div><div class="c"><h3>Defense day bag</h3><div id="bg"></div></div><button onclick="print()">Print / save as PDF</button></section>
+
+<p class="m ctr" style="margin-top:30px">Concede what’s fair, defend what’s solid. Good luck!</p>
+</div>
+<script>
+var Q=[
+["Theory","Why Social Judgment Theory? A rating label isn’t a persuasive message.","The rating is a classification claim (“this is PG”). Students compare it to their own standard of what PG/SPG content should contain. That standard is the anchor, the latitudes are the ranges they accept or reject, and assimilation/contrast explain biased perceptions."],
+["Theory","Your anchor is “4th-year students.” An anchor is a position, not a group.","Agree and fix it: the anchor is each student’s pre-existing standard for what PG/SPG content should contain, shaped by Media Laws and Ethics coursework and viewing experience."],
+["Theory","Define “effectiveness.” How do latitudes measure it?","Perceived effectiveness: how far students judge the advisory accurate and informative. Mostly acceptance means effective, non-commitment means unclear, rejection means ineffective. Behavioral effectiveness is a stated limitation."],
+["Theory","You say ego-involvement is empirical, then say students have high ego-involvement.","It’s a literature-based expectation confirmed by measurement. Change the definitive wording on p. 17 to “expected to have.”"],
+["Theory","“Fits the rating” against what standard? Opinion isn’t accuracy.","The personal standard is the anchor, so the study measures perceived fit, not objective accuracy. State whether respondents received MTRCB’s actual criteria, and list it as a limitation if not."],
+["Scope","Why only It’s Showtime and Batang Quiapo?","Purposive, high-visibility exemplars of PG and SPG. Concede that findings are program-specific and not generalizable to the whole system."],
+["Scope","Why 4th-year only? No comparison group.","The study doesn’t claim they differ from other viewers. They are an informed purposive sample (Cho, Walter & Murphy, 2024). Comparison is a recommendation for future research."],
+["Scope","The intro promises knowledge AND practice, but the SOP lists only knowledge.","Decide before the defense: add a practice SOP about viewing decisions, or remove “practice” from the intro and background."],
+["Scope","Is this Manila only or Open University too?","Resolve the mismatch first: the SOP says Traditional and Open University, the scope says PUP Manila only. Know your final population and N."],
+["Method","Sample size and sampling technique? Show the computation.","Have the population count, formula (e.g., Slovin or total enumeration), margin of error, and sampling method ready. Match this to your Chapter 3."],
+["Method","How did you validate and test the reliability of your questionnaire?","Expert validation, a pilot test, and Cronbach’s alpha with the actual value. Prepare the number and the interpretation threshold you used."],
+["Method","SOP 4 asks about “factors.” Which variables and which statistical test?","Name the variables (viewing frequency, genre, platform) and the test. SJT doesn’t predict demographic effects, so SOP 4 is exploratory."],
+["Method","How exactly do you measure the three latitudes?","Explain the instrument items and the scoring rule: which responses count as acceptance, non-commitment, or rejection, and how a “preponderance” is determined."],
+["Method","Self-report bias: students may answer as “future professionals.”","Acknowledge social desirability bias. Mention anonymity and neutral wording, and list it as a limitation."],
+["Method","Do students even see the advisory? Many watch clips on YouTube.","Tie this to SOP 1e (platform). It’s a strength: platform data lets you discuss whether advisories reach viewers at all."],
+["Method","How did you handle ethics: consent, anonymity, data privacy?","Informed consent, voluntary participation, anonymity, and data handling consistent with the Data Privacy Act of 2012. Have your consent form ready."],
+["Writing","Aren’t you assuming results? The framework says students “may reject” ratings.","Those passages are illustrative, not hypotheses. Reword with “may” and add that outcomes are determined by the data."],
+["Writing","Why is the same material repeated three times?","Concede it, don’t defend it. Say you are consolidating, then actually consolidate."],
+["Writing","Your citations are inconsistent (MTRCB 2020 vs 2023, FLEMMS 2024 vs 2025).","Own the error, show the corrected reference list, and say which year is the verified source."],
+["Sources","Mostly foreign or secondary sources. Where are Philippine studies? Does Griffin (2019) say that?","Open every cited PDF to the exact page. Soften or replace any claim you can’t back up, and add local studies if you have them."],
+["Sources","The 2023 MTRCB–It’s Showtime controversy may bias respondents.","Acknowledge it as a possible anchor-shaping experience relevant to ego-involvement. Note it in limitations and verify the shows’ current classifications."],
+["Sources","What will MTRCB actually do with your findings?","Findings can inform clearer content descriptors, public information campaigns, and partnerships with academic groups. Frame them as recommendations, not guarantees."]
+];
+var FX=["Merge Introduction and Background into one section","Redefine the anchor as a position or standard","Define “perceived effectiveness” in one sentence","Align knowledge and practice across intro, background, SOP","Soften presupposed outcomes in the framework","Resolve Manila vs. Open University scope","Fix citations and the “LATTITUDE” typos in both figures","Retitle Figure 2 as the conceptual framework","Add limitations: two programs, self-report, perception vs. behavior, one campus","Open every cited source to the exact page"];
+var BG=["Printed copies of the paper for each panelist","Your own annotated copy with tabs","Questionnaire, consent form, and raw data summary","Slides on a flash drive and in the cloud","Water and a snack","Formal attire, ready the night before","Arrive 30 minutes early"];
+var GL=[["Anchor","A student’s own standard for what PG/SPG content should contain."],["Latitude of acceptance","Content/ratings the student finds reasonable. Many acceptances suggest an effective advisory."],["Latitude of non-commitment","Neutral zone. Many here suggest the advisory isn’t clear enough."],["Latitude of rejection","Ratings the student finds objectionable. Many rejections suggest an ineffective advisory."],["Ego-involvement","How personally important the issue is; expected to be higher for future media practitioners, to be confirmed by data."],["Assimilation effect","Perceiving a rating as closer to your view than it is."],["Contrast effect","Perceiving a rating as farther from your view than it is."]];
+var BP=["That’s a fair point. Let me clarify what the study does and doesn’t claim.","That’s outside our scope, and we list it as a limitation and a recommendation.","I’d like to check that against our data before I answer.","We acknowledge that, and here is how we addressed it.","Our framework treats that as an expectation to be confirmed, not an assumption.","Thank you, we will revise that part in the final manuscript."];
+var PS={"Any":null,"The Methodologist":["Method","Scope"],"The Theory Purist":["Theory"],"The Skeptic":["Sources","Writing"]};
+var TG=["All","Theory","Scope","Method","Writing","Sources"];
+var PF=["My study is about…","It matters because…","I surveyed… using…","What it adds is…"];
+var $=function(i){return document.getElementById(i)};
+var S={r:{},f:{},b:{},d:"",p:["","","",""]};
+try{Object.assign(S,JSON.parse(localStorage.getItem("dp2")||"{}"))}catch(e){}
+function sv(){try{localStorage.setItem("dp2",JSON.stringify(S))}catch(e){}}
+var tabs=[["home","<span>🏠</span> Home"],["study","<span>📚</span> Study"],["mock","<span>🎤</span> Mock"],["kit","<span>🧰</span> Toolkit"],["list","<span>✅</span> Lists"]],flt="All",per="Any",cur=-1,iv=null;
+function go(t){tabs.forEach(function(x){$("t-"+x[0]).classList.toggle("on",x[0]==t)});document.querySelectorAll("#nv button").forEach(function(b){b.classList.toggle("on",b.dataset.t==t)});scrollTo(0,0)}
+$("nv").innerHTML=tabs.map(function(x){return '<button data-t="'+x[0]+'">'+x[1]+'</button>'}).join("");
+$("nv").onclick=function(e){if(e.target.dataset.t)go(e.target.dataset.t)};
+document.querySelectorAll("[data-go]").forEach(function(b){b.onclick=function(){go(b.dataset.go)}});
+function home(){var n=[0,0,0,0];Q.forEach(function(q,i){n[S.r[i]||0]++});
+$("pb").style.width=(n[1]/Q.length*100)+"%";
+$("sg").innerHTML=[["Nailed",n[1]],["Shaky",n[2]],["Missed",n[3]],["Unseen",n[0]]].map(function(x){return '<div class="st"><b>'+x[1]+'</b>'+x[0]+'</div>'}).join("");
+var w=TG.slice(1).map(function(t){var a=Q.map(function(q,i){return [q,i]}).filter(function(p){return p[0][0]==t}),ok=a.filter(function(p){return S.r[p[1]]==1}).length;return [t,Math.round(ok/a.length*100)]}).sort(function(a,b){return a[1]-b[1]});
+$("wk").innerHTML=w.map(function(x){return '<div>'+x[0]+' · '+x[1]+'% nailed<div class="bar"><i style="width:'+x[1]+'%"></i></div></div>'}).join("");
+$("dd").value=S.d;
+if(!S.d)$("cd").textContent="Set the date";else{var d=Math.ceil((new Date(S.d+"T00:00:00")-new Date())/864e5);$("cd").textContent=d>0?d+" days":d==0?"Today! You’re ready.":"Done. Proud of you!"}
+$("lb").style.width=((Object.keys(S.f).filter(function(k){return S.f[k]}).length+Object.keys(S.b).filter(function(k){return S.b[k]}).length)/(FX.length+BG.length)*100)+"%"}
+$("dd").onchange=function(){S.d=this.value;sv();home()};
+function study(){$("fc").innerHTML=TG.map(function(t){return '<button data-f="'+t+'" class="'+(t==flt?"on":"")+'">'+t+'</button>'}).join("");
+$("ql").innerHTML=Q.map(function(q,i){if(flt!="All"&&q[0]!=flt)return "";var r=S.r[i]||0;return '<details class="c q r'+r+'"><summary><span class="tg">'+q[0]+'</span>'+q[1]+'</summary><p><b>Suggested answer:</b> '+q[2]+'</p><div class="rt">'+[["1","Nailed it"],["2","Shaky"],["3","Missed"]].map(function(b){return '<button data-i="'+i+'" data-v="'+b[0]+'" class="'+(r==b[0]?"on":"")+'">'+b[1]+'</button>'}).join("")+'</div></details>'}).join("")}
+$("fc").onclick=function(e){if(e.target.dataset.f){flt=e.target.dataset.f;study()}};
+function rate(e){var b=e.target;if(!b.dataset.v)return;var o=document.querySelector("#ql details[open]"),y=scrollY;S.r[b.dataset.i]=+b.dataset.v;sv();var op=o&&o.querySelector("button").dataset.i;study();home();if(op){var d=document.querySelectorAll("#ql details");d.forEach(function(x){if(x.querySelector("button").dataset.i==op)x.open=true})}scrollTo(0,y)}
+$("ql").onclick=rate;
+$("pc").innerHTML=Object.keys(PS).map(function(p){return '<button data-p="'+p+'" class="'+(p==per?"on":"")+'">'+p+'</button>'}).join("");
+$("pc").onclick=function(e){if(e.target.dataset.p){per=e.target.dataset.p;this.querySelectorAll("button").forEach(function(b){b.classList.toggle("on",b.dataset.p==per)});$("mp").textContent=per}};
+function nxt(){var pool=Q.map(function(q,i){return i}).filter(function(i){return !PS[per]||PS[per].indexOf(Q[i][0])>-1});var pri=pool.filter(function(i){return S.r[i]!=1});if(pri.length)pool=pri;var n;do{n=pool[Math.floor(Math.random()*pool.length)]}while(n==cur&&pool.length>1);cur=n;$("mq").textContent=Q[n][1];$("ma").style.display="none";$("mr").innerHTML="";clearInterval(iv);var t=90;$("mt").textContent=t;iv=setInterval(function(){t--;$("mt").textContent=Math.max(t,0);if(t<=0)clearInterval(iv)},1000)}
+$("nx").onclick=nxt;
+$("rv").onclick=function(){if(cur<0)return;clearInterval(iv);$("ma").textContent=Q[cur][2];$("ma").style.display="block";$("mr").innerHTML=[["1","Nailed it"],["2","Shaky"],["3","Missed"]].map(function(b){return '<button data-i="'+cur+'" data-v="'+b[0]+'">'+b[1]+'</button>'}).join("")};
+$("mr").onclick=function(e){if(e.target.dataset.v){S.r[e.target.dataset.i]=+e.target.dataset.v;sv();home();study();nxt()}};
+function pitch(){$("pf").innerHTML=PF.map(function(p,i){return '<textarea rows="2" data-k="'+i+'" placeholder="'+p+'">'+(S.p[i]||"")+'</textarea>'}).join("");pv()}
+function pv(){var t=S.p.filter(Boolean).join(" ");$("pv").textContent=t||"Your pitch will appear here.";return t}
+$("pf").oninput=function(e){S.p[e.target.dataset.k]=e.target.value;sv();pv()};
+$("cp").onclick=function(){var t=pv();try{navigator.clipboard.writeText(t)}catch(e){}this.textContent="Copied!";var b=this;setTimeout(function(){b.textContent="Copy pitch"},1200)};
+$("gl").innerHTML=GL.map(function(g){return '<div class="gl"><b>'+g[0]+'</b><p style="display:none">'+g[1]+'</p></div><hr style="border:0;border-top:1px solid var(--line)">'}).join("");
+$("gl").onclick=function(e){var d=e.target.closest(".gl");if(d){var p=d.querySelector("p");p.style.display=p.style.display=="none"?"block":"none"}};
+$("bp").innerHTML=BP.map(function(p){return '<button style="display:block;width:100%;text-align:left;margin:5px 0;border-radius:12px">'+p+'</button>'}).join("");
+$("bp").onclick=function(e){if(e.target.tagName=="BUTTON"){try{navigator.clipboard.writeText(e.target.textContent)}catch(x){}}};
+var bi=null,ph=["Breathe in","Hold","Breathe out","Hold"],bn=0;
+$("bb").onclick=function(){var b=$("br");if(bi){clearInterval(bi);bi=null;b.textContent="Ready";b.style.transform="none";this.textContent="Start";return}this.textContent="Stop";bn=0;function step(){b.textContent=ph[bn%4];b.style.transform=(bn%4==0||bn%4==1)?"scale(1.35)":"scale(1)";bn++}step();bi=setInterval(step,4000)};
+function lists(){[["fx",FX,"f"],["bg",BG,"b"]].forEach(function(x){$(x[0]).innerHTML=x[1].map(function(t,i){return '<label class="ck"><input type="checkbox" data-s="'+x[2]+'" data-i="'+i+'"'+(S[x[2]][i]?" checked":"")+'><span>'+t+'</span></label>'}).join("")})}
+document.addEventListener("change",function(e){var t=e.target;if(t.dataset.s){S[t.dataset.s][t.dataset.i]=t.checked;sv();home()}});
+home();study();pitch();lists();go("home");
+</script>
+</body>
+</html>
